@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Come installare - YouTube Video Casuale</title>
+  <style>
+    body {
+      font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+      max-width: 640px;
+      margin: 40px auto;
+      padding: 0 20px 60px;
+      color: #1a1a1a;
+      line-height: 1.6;
+    }
+    h1 { font-size: 22px; }
+    h2 {
+      font-size: 17px;
+      margin-top: 32px;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 6px;
+    }
+    ol, ul { padding-left: 22px; }
+    li { margin-bottom: 8px; }
+    code {
+      background: #f2f2f2;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 13px;
+    }
+    .box {
+      background: #fff8e1;
+      border: 1px solid #ffe082;
+      border-radius: 8px;
+      padding: 12px 16px;
+      margin: 16px 0;
+      font-size: 14px;
+    }
+    a { color: #065fd4; }
+  </style>
+</head>
+<body>
+  <h1>🎲 YouTube Video Casuale — Guida all'installazione</h1>
+  <p>
+    Questa estensione aggiunge un pulsante <b>"Casuale"</b> nella tab
+    <b>Video</b> di un canale YouTube: mostra tutti i video del canale in
+    ordine mescolato, non solo i più recenti o i più popolari.
+  </p>
+
+  <h2>1. Installa l'estensione</h2>
+  <ol>
+    <li>Estrai/scarica la cartella con tutti i file (<code>manifest.json</code>, <code>content.js</code>, <code>options.html</code>, <code>options.js</code>) in un posto fisso del tuo computer — <b>non spostarla né cancellarla dopo</b>, o l'estensione smette di funzionare.</li>
+    <li>Apri il browser (Chrome, Opera GX, Edge... funziona su tutti quelli basati su Chromium) e vai su <code>chrome://extensions</code> (su Opera GX: <code>opera://extensions</code>).</li>
+    <li>Attiva la <b>"Modalità sviluppatore"</b> (interruttore in alto a destra).</li>
+    <li>Clicca <b>"Carica estensione non pacchettizzata"</b> e seleziona la cartella del punto 1.</li>
+  </ol>
+
+  <h2>2. Procurati la tua chiave API gratuita</h2>
+  <div class="box">
+    ⚠️ Ogni persona deve usare la <b>propria</b> chiave, gratuita. Non è inclusa
+    nel pacchetto per motivi di sicurezza e di quota giornaliera.
+  </div>
+  <ol>
+    <li>Vai su <a href="https://console.cloud.google.com" target="_blank">console.cloud.google.com</a> e accedi con un account Google.</li>
+    <li>In alto, menu progetti → <b>"Nuovo progetto"</b>. Dagli un nome a caso e crealo.</li>
+    <li>Menu laterale → <b>"API e servizi" → "Libreria"</b>, cerca <b>"YouTube Data API v3"</b> e clicca <b>"Abilita"</b>.</li>
+    <li><b>"API e servizi" → "Credenziali" → "Crea credenziali" → "Chiave API"</b>. Ti genera una stringa tipo <code>AIzaSy...</code>: quella è la tua chiave.</li>
+    <li>(Consigliato) Clicca sulla chiave appena creata → sotto "Restrizioni API" seleziona solo <b>"YouTube Data API v3"</b>, così è utilizzabile solo per questo scopo.</li>
+  </ol>
+
+  <h2>3. Inserisci la chiave nell'estensione</h2>
+  <ol>
+    <li>Vai su <code>chrome://extensions</code> (o <code>opera://extensions</code>).</li>
+    <li>Trova <b>"YouTube Video Casuale"</b> → clicca <b>"Dettagli"</b>.</li>
+    <li>Clicca <b>"Opzioni estensione"</b>.</li>
+    <li>Incolla la tua chiave API nel campo e premi <b>"Salva"</b>.</li>
+  </ol>
+
+  <h2>4. Usala</h2>
+  <ol>
+    <li>Vai sul canale YouTube che ti interessa.</li>
+    <li>Apri la tab <b>"Video"</b>.</li>
+    <li>Vicino a "Più recenti / Popolari / Meno recenti" comparirà il pulsante <b>"Casuale"</b>. Cliccalo.</li>
+    <li>La prima volta su un canale ci vorranno alcuni secondi (scarica l'elenco completo dei video). Le volte successive, entro 24 ore, sarà istantaneo.</li>
+  </ol>
+
+  <h2>Cose da sapere</h2>
+  <ul>
+    <li>La chiave API gratuita ha un limite di <b>10.000 richieste al giorno</b>: più che sufficiente per uso personale, anche intenso.</li>
+    <li>Se non hai ancora inserito una chiave, il pulsante "Casuale" te lo ricorderà quando lo clicchi.</li>
+    <li>Funziona solo sui video pubblici del canale (non su contenuti riservati agli iscritti).</li>
+  </ul>
+</body>
+</html>

@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Video Casuale",
+  "version": "5.0",
+  "description": "Aggiunge l'opzione 'Casuale' al menu di ordinamento nella tab Video di un canale YouTube, mostrando i video mescolati tra TUTTI quelli caricati dal canale.",
+  "permissions": ["storage"],
+  "host_permissions": [
+    "https://www.googleapis.com/*"
+  ],
+  "options_page": "options.html",
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Impostazioni - YouTube Video Casuale</title>
+  <style>
+    body {
+      font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+      max-width: 480px;
+      margin: 40px auto;
+      padding: 0 16px;
+      color: #1a1a1a;
+    }
+    h1 { font-size: 18px; }
+    p { font-size: 14px; line-height: 1.5; color: #444; }
+    input[type="text"] {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 8px 10px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      margin-top: 8px;
+    }
+    button {
+      margin-top: 12px;
+      padding: 8px 18px;
+      font-size: 14px;
+      font-weight: 600;
+      border: none;
+      border-radius: 6px;
+      background: #cc0000;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover { background: #a80000; }
+    #status {
+      margin-top: 10px;
+      font-size: 13px;
+      color: #1a7a1a;
+      min-height: 18px;
+    }
+    a { color: #065fd4; }
+  </style>
+</head>
+<body>
+  <h1>🎲 YouTube Video Casuale — Impostazioni</h1>
+  <p>
+    Questa estensione usa la <b>YouTube Data API</b> di Google per leggere l'elenco
+    completo dei video di un canale. Serve una chiave API personale, gratuita.
+    Se non sai come ottenerla, apri il file <b>readme.html</b> incluso nella cartella
+    dell'estensione: trovi la guida passo passo.
+  </p>
+
+  <label for="apiKey"><b>La tua chiave API di YouTube:</b></label>
+  <input type="text" id="apiKey" placeholder="AIzaSy...">
+  <br>
+  <button id="save">Salva</button>
+  <div id="status"></div>
+
+  <script src="options.js"></script>
+</body>
+</html>
