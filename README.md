@@ -51,3 +51,6 @@ Plain JavaScript, Manifest V3, no build step, no external dependencies. Uses `ch
 ## 📄 License
 
 MIT — see [LICENSE](./LICENSE).
+
+
+made by claude
